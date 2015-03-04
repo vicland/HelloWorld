@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.alumno.helloworld.Modelo.Deporte;
@@ -80,6 +81,20 @@ public class MyActivity extends ActionBarActivity {
                     }
                 }
         );
+
+       ImageButton buttonsalir= (ImageButton) findViewById(R.id.imageButtonSalir);
+
+        buttonsalir.setOnClickListener(
+
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
+                    }
+                }
+        );
+
     }
 
 

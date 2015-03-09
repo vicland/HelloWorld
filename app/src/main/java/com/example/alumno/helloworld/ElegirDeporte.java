@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.alumno.helloworld.Modelo.Deporte;
 import com.example.alumno.helloworld.bd.GestorBD;
 
 import java.util.List;
@@ -19,14 +18,14 @@ import java.util.List;
 import static android.view.View.OnClickListener;
 
 
-public class MyActivity extends ActionBarActivity {
+public class ElegirDeporte extends ActionBarActivity {
 
     private GestorBD gb=new GestorBD(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.elegirdeporte);
         Button button = (Button)findViewById(R.id.buttonfut);
 
         final Context context = this;
@@ -51,7 +50,7 @@ public class MyActivity extends ActionBarActivity {
                 new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(context, MyActivity2.class);
+                        Intent intent = new Intent(context, Deporte.class);
                         startActivity(intent);
                     }
                 }
@@ -66,13 +65,13 @@ public class MyActivity extends ActionBarActivity {
                     public void onClick(View v) {
 
 
-                        gb.crearDeporte(new Deporte(1,"futbol","",""));
-                        gb.crearDeporte(new Deporte(2,"baloncesto","",""));
+                        gb.crearDeporte(new com.example.alumno.helloworld.Modelo.Deporte(1,"futbol","",""));
+                        gb.crearDeporte(new com.example.alumno.helloworld.Modelo.Deporte(2,"baloncesto","",""));
 
-                        List<Deporte> deportes=gb.obtenerDeportes();
+                        List<com.example.alumno.helloworld.Modelo.Deporte> deportes=gb.obtenerDeportes();
 
                         String a="Base de Datos creada con los valores: ";
-                        for(Deporte d:deportes){
+                        for(com.example.alumno.helloworld.Modelo.Deporte d:deportes){
                             a+="\t"+d.getId_deporte()+"-> "+d.getNombre()+"\n";
                         }
                         Toast b=Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT);

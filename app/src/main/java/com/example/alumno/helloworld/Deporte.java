@@ -9,13 +9,13 @@ import static com.example.alumno.helloworld.R.*;
 /**
  * Created by Alumno on 25/02/2015.
  */
-public class MyActivity2 extends ActionBarActivity {
+public class Deporte extends ActionBarActivity {
 
     Button button;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_my2);
+        setContentView(layout.deporte);
     }
 }

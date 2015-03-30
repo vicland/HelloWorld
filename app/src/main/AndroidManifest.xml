@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".DeporteFutbol"
+=======
+            android:name=".Deporte"
+>>>>>>> f5af1a3cf7e12a716c766324ffb463e92bb5e840
             android:label="Hello World" >
         </activity>
         <activity

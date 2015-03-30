@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         jar="C:\Users\damonfor\Documents\ProyectoAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -14,6 +15,20 @@
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="C:\Users\damonfor\Documents\ProyectoAndroid\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-0f8cfec339ca8bf2968d4a3517b9962c54c1405d.jar" />
+=======
+        jar="C:\Users\Alumno\AndroidStudioProjects\HelloWorld\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Alumno\AndroidStudioProjects\HelloWorld\app\build\intermediates\pre-dexed\debug\classes-4ae6dfd24bfd3e1260c2640578b72a56e3d454f7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alumno\AndroidStudioProjects\HelloWorld\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Alumno\AndroidStudioProjects\HelloWorld\app\build\intermediates\pre-dexed\debug\classes-14204b92ed744dc7eec22cf73a5e7824d10ff9e8.jar" />
+>>>>>>> f5af1a3cf7e12a716c766324ffb463e92bb5e840
     </item>
     <item
         jar="C:\Users\damonfor\Documents\ProyectoAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"

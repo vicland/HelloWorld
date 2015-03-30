@@ -1,13 +1,21 @@
 package com.example.alumno.helloworld;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.alumno.helloworld.bd.GestorBD;
+
+import java.util.List;
+
+import static android.view.View.OnClickListener;
 
 
 public class ElegirDeporte extends ActionBarActivity {
@@ -17,9 +25,74 @@ public class ElegirDeporte extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.elegirdeporte);
+        Button button = (Button)findViewById(R.id.buttonfut);
+
+        final Context context = this;
+
+        button.setOnClickListener(
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast toast1 =
+                                Toast.makeText(getApplicationContext(),
+                                        "Hola David", Toast.LENGTH_SHORT);
+
+                        toast1.show();
+                    }
+                }
+        );
+
+        Button button2 = (Button)findViewById(R.id.button2);
+
+        button2.setOnClickListener(
+
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context, Deporte.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+
+        Button button3 = (Button)findViewById(R.id.button3);
+
+        button3.setOnClickListener(
+
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                        gb.crearDeporte(new com.example.alumno.helloworld.Modelo.Deporte(1,"futbol","",""));
+                        gb.crearDeporte(new com.example.alumno.helloworld.Modelo.Deporte(2,"baloncesto","",""));
+
+                        List<com.example.alumno.helloworld.Modelo.Deporte> deportes=gb.obtenerDeportes();
+
+                        String a="Base de Datos creada con los valores: ";
+                        for(com.example.alumno.helloworld.Modelo.Deporte d:deportes){
+                            a+="\t"+d.getId_deporte()+"-> "+d.getNombre()+"\n";
+                        }
+                        Toast b=Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT);
+                        b.show();
+
+                    }
+                }
+        );
+
+       ImageButton buttonsalir= (ImageButton) findViewById(R.id.imageButtonSalir);
+
+        buttonsalir.setOnClickListener(
+
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
+                    }
+                }
+        );
 
     }
 
@@ -47,29 +120,4 @@ public class ElegirDeporte extends ActionBarActivity {
     }
 
 
-    public void pulsarBoton(View view) {
-        Intent intent=null;
-        Bundle mBundle=null;
-        switch(view.getId()) {
-            case R.id.btnFutbol:
-                intent = new Intent(this, DeporteFutbol.class);
-                mBundle = new Bundle();
-                startActivity(intent);
-                break;
-            case R.id.btnBaloncesto:
-                intent = new Intent(this,deporteBaloncesto.class);
-                mBundle = new Bundle();
-                startActivity(intent);
-                break;
-            case R.id.btnVoley:
-                intent = new Intent(this,deportevoley.class);
-                mBundle = new Bundle();
-                startActivity(intent);
-                break;
-        }
-        //Toast b=Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT);
-        //b.show();
-
-
-    }
 }

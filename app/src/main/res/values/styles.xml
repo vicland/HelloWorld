@@ -13,6 +13,7 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+<<<<<<< HEAD
     <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@null</item>
@@ -30,4 +31,6 @@
 
     <style name="ButtonBarButton" />
 
+=======
+>>>>>>> f5af1a3cf7e12a716c766324ffb463e92bb5e840
 </resources>
